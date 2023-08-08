@@ -52,7 +52,7 @@ const Cards: types.Brick<CardsProps> = ({
         <div
           className={classNames(
             'grid gap-[30px] grid-cols-1',
-            width === 'small' ? 'lg:grid-cols-2' : 'md:grid-cols-2'
+            width === 'small' ? 'lg:grid-cols-1' : 'md:grid-cols-1'
           )}
         >
           <Repeater propName="cards" />

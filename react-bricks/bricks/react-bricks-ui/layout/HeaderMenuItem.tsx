@@ -30,8 +30,8 @@ const HeaderMenuItem: types.Brick<HeaderMenuItemProps> = ({
       <div>
         <Link
           href={linkPath}
-          className="hidden lg:inline-flex justify-center items-center text-sm font-bold py-1.5 px-2 rounded-[5px] transition-colors ease-out text-gray-600 dark:text-white hover:bg-sky-500/20 dark:hover:bg-sky-500/40 hover:text-sky-600"
-          activeClassName="text-sky-600 bg-sky-500/10 dark:bg-sky-500/30"
+          className="hidden lg:inline-flex justify-center items-center text-sm font-bold py-1.5 px-2 rounded-[5px] transition-colors ease-out text-gray-600 dark:text-white hover:bg-green-500/20 dark:hover:bg-green-500/40 hover:text-green-600"
+          activeClassName="text-green-600 bg-green-500/10 dark:bg-green-500/30"
         >
           <Text
             propName="linkText"
@@ -41,7 +41,7 @@ const HeaderMenuItem: types.Brick<HeaderMenuItemProps> = ({
         </Link>
         <Link
           href={linkPath}
-          className="block lg:hidden text-sm mb-3 transition-colors ease-out text-gray-800 hover:text-sky-600"
+          className="block lg:hidden text-sm mb-3 transition-colors ease-out text-gray-800 hover:text-green-600"
         >
           <div onClick={() => setMobileMenuOpen(false)}>
             {' '}
@@ -59,8 +59,8 @@ const HeaderMenuItem: types.Brick<HeaderMenuItemProps> = ({
       <div ref={ref} className="hidden lg:block relative">
         <button
           className={classNames(
-            'text-gray-600 dark:text-white hover:bg-sky-500/20 hover:text-sky-600 dark:hover:bg-sky-500/40 inline-flex justify-center items-center text-sm font-bold py-1.5 px-2 rounded-[5px] transition-colors ease-out',
-            { 'bg-sky-500/20 dark:bg-sky-500/40 text-sky-600': open }
+            'text-gray-600 dark:text-white hover:bg-green-500/20:hover:text-green-600 dark:hover:bg-green-500/40 inline-flex justify-center items-center text-sm font-bold py-1.5 px-2 rounded-[5px] transition-colors ease-out',
+            { 'bg-green-500/20 dark:bg-green-500/40 text-green-600': open }
           )}
           onClick={() => setOpen((current) => !current)}
         >

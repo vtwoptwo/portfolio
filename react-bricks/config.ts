@@ -5,14 +5,20 @@ import NextLink from './NextLink'
 import bricks from './bricks'
 import pageTypes from './pageTypes'
 
+
 const config: types.ReactBricksConfig = {
   appId: process.env.NEXT_PUBLIC_APP_ID,
   apiKey: process.env.API_KEY,
   bricks,
   pageTypes,
   customFields: [],
-  logo: '/logo.svg',
-  loginUI: {},
+  logo: '/logo.png',
+  loginUI: {
+    sideImage: '/logo.png',
+    welcomeText: 'Welcome back Vera!',
+    welcomeTextStyle: {padding: '10px'},
+    logo: '/favicon.ico',
+    logoHeight:20,},
   contentClassName: '',
   //defaultTheme: "",
   renderLocalLink: NextLink,
@@ -25,9 +31,9 @@ const config: types.ReactBricksConfig = {
   // getAdminMenu: () => [],
   isDarkColorMode: false,
   toggleColorMode: () => {},
-  useCssInJs: false,
+  useCssInJs: true,
   appRootElement: '#__next',
-  clickToEditSide: types.ClickToEditSide.BottomRight,
+  clickToEditSide: types.ClickToEditSide.None, // turning off ability to edit
   //responsiveBreakpoints: [{ type: types.DeviceType.Phone, width: 480, label: "Smartphone" },],
   enableAutoSave: true,
   disableSaveIfInvalidProps: false,

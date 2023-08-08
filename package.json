@@ -10,6 +10,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "dayjs": "^1.11.7",
     "email-validator": "^2.0.4",
     "jsonp": "^0.2.1",
@@ -22,6 +25,7 @@
     "react-bricks": "^3.11.3",
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
+    "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

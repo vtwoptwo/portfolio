@@ -198,7 +198,7 @@ HeroUnit.schema = {
       itemType: blockNames.Button,
       itemLabel: 'Button',
       min: 0,
-      max: 2,
+      max: 3,
     },
   ],
   sideEditProps: [

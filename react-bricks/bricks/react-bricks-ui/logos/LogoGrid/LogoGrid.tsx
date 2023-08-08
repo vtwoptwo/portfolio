@@ -34,9 +34,9 @@ const LogoGrid: types.Brick<LogoGridProps> = ({
         <Repeater
           propName="badge"
           itemProps={{
-            textAlign: 'left',
+            textAlign: 'center',
           }}
-          renderWrapper={(items) => <div className="mb-6 flex justify-start">{items}</div>}
+          renderWrapper={(items) => <div className="mb-6 flex align-center ">{items}</div>}
         />
         <div
           className={classNames(

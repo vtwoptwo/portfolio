@@ -1,17 +1,18 @@
 import classNames from 'classnames'
 import React from 'react'
-import { Plain, types } from 'react-bricks/frontend'
+import { Plain, Repeater, types } from 'react-bricks/frontend'
 import { RichText, Text, Image, Link } from 'react-bricks/frontend'
 import blockNames from '../../blockNames'
-import { textColors } from '../../colors'
+import { textColors, highlightTextColors } from '../../colors'
 import { icons } from '../../shared/defaultImages'
+import { sectionPaddingsEditProps } from '../../LayoutSideProps'
 
 interface CardProps {
   withIcon: boolean
   withTitle: boolean
   withLink: boolean
   linkText: any
-  linkPath: string
+  linkPath: string,
 }
 
 const Card: types.Brick<CardProps> = ({
@@ -28,16 +29,34 @@ const Card: types.Brick<CardProps> = ({
     <div
       className={`p-7 flex border border-black/10 dark:border-white/10 bg-white dark:bg-white/10 rounded`}
     >
+     
       {withIcon && (
+        
+
         <Image
           propName="icon"
           alt="logo"
-          imageClassName={`text-left object-contain w-10 h-10 mr-5`}
+          imageClassName={`text-left object-contain w-10 h-10 mr-10 mt-10`}
         />
       )}
 
-      <div className="w-full">
+      <div className="text-left mb-6">
+      <div className='text-left object-contain w-500 h-500 mb-1'>
+      <Text
+        renderBlock={(props) => (
+          <div
+            className={classNames('font-bold', textColors.GRAY_400)}
+          >
+            {props.children}
+          </div>
+        )}
+        placeholder="year"
+        propName= "year"
+        />
+      </div>
+
         {withTitle && (
+          
           <Text
             renderBlock={(props) => (
               <div
@@ -50,6 +69,7 @@ const Card: types.Brick<CardProps> = ({
             propName="title"
           />
         )}
+        
         <RichText
           renderBlock={(props) => (
             <div
@@ -115,6 +135,7 @@ Card.schema = {
     title: 'Twitter',
     description: 'Get the latest event updates about React Bricks.',
     linkText: 'Follow us now',
+    year: '2021',
   }),
   sideEditProps: [
     {

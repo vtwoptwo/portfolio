@@ -13,6 +13,7 @@ const MyApp = (props: AppProps) => {
         if (anchor.innerHTML.includes('Made in <span class="l">React Bricks</span>')) {
           // Replace the innerHTML with your desired content
           anchor.innerHTML = '<img src="https://assets.reactbricks.com/k9xUIXa4twJLb--/images/src_set/1Sm72ntcxTg54V5-76/vtwoptwo.webp" style="width: 18px; height: 18px; margin-right: 6px;"><span>made by vera</span>';
+          anchor.href = 'https://github.com/vtwoptwo/portfolio';
         }
       });
     });

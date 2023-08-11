@@ -15,7 +15,7 @@ const Thumbnail: types.Brick<ThumbnailProps> = ({
   return (
     <div 
     {...rest}
-    className={`my-6 mx-2 p-2 text-center w-1/7 border rounded-lg ${
+    className={`my-6 mx-2 p-2 text-center w-1/7 border rounded-lg dark:border-white/10 bg-white dark:bg-white/10 rounded ${
       hasShadow ? 'shadow-xl' : '' 
 
     } ${bgColor?.className}`}

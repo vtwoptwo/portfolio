@@ -48,24 +48,6 @@ const Page: React.FC<PageProps> = ({
           <Head>
             <title>{page.meta.title}</title>
             <meta name="description" content={page.meta.description} />
-            <script dangerouslySetInnerHTML={{ __html: `
-              var _paq = window._paq = window._paq || [];
-              _paq.push(['trackPageView']);
-              _paq.push(['enableLinkTracking']);
-              (function() {
-                var u="https://vtwop20.matomo.cloud/";
-                _paq.push(['setTrackerUrl', u+'matomo.php']);
-                _paq.push(['setSiteId', '1']);
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.async=true; g.src='//cdn.matomo.cloud/vtwop20.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-              })();
-            `}} />
-                  <noscript>
-                  <p>
-                    <img src="https://vtwop20.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style={{border: '0'}} alt="" />
-                  </p>
-          </noscript>
-                      
           </Head>
           {headerOk && !errorHeader ? (
             <PageViewer page={headerOk} showClickToEdit={false} />
